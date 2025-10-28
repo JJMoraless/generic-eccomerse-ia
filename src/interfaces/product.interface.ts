@@ -3,16 +3,17 @@ export interface Product {
   images: string[];
   inStock: number;
   price: number;
-  sizes: ValidSizes[];
+  sizes: SizeProduct[];
   slug: string;
   tags: string[];
   title: string;
-  type: ValidTypes;
-  gender: "men" | "women" | "kid" | "unisex";
+  type: TypeProduct;
+  gender: CategoryProduct;
 }
 
-export type ValidSizes = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
-export type ValidTypes = "shirts" | "pants" | "hoodies" | "hats";
+export type CategoryProduct = "men" | "women" | "kid" | "unisex";
+export type SizeProduct = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
+export type TypeProduct = "shirts" | "pants" | "hoodies" | "hats";
 
 export interface SeedData {
   products: Product[];
